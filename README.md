@@ -1,6 +1,18 @@
 A script to test binary building with ECL (Common Lisp)
 =======================================================
 
+This repository was created to reproduce an error, I've got
+when trying to compile a lisp program with ECL into a binary.
+The program is simple HELLO WORLD which have one dependency - `cffi`.
+
+I found that if there is a `cffi` module in dependencies
+of my system, then a binary crashes right after the start.
+But if I run ecl and just quickload my system, then everything
+goes very whell.
+
+It is strange, because [cffi's documentation](https://common-lisp.net/project/cffi/) says
+that ECL is supported.
+
 
 ## How to test
 
