@@ -1,11 +1,7 @@
-;(require 'asdf)
-(load "/Users/art/projects/cl-jslog/lisp/local-projects/asdf/build/asdf.lisp")
-
 (defpackage :build
   (:use
    :common-lisp
-   #+sbcl
-   :sb-ext
+   ;; we need this extension to make function QUIT is available
    #+ecl
    :ext))
 
