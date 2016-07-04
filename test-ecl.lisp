@@ -6,6 +6,13 @@
 
 (in-package #:test-ecl)
 
+(ql:quickload :hunchentoot)
+
 (defun main ()
-  (format t "HELLO WORLD~%")
-  (EXIT))
+  (format t "Starting server~%")
+  (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :address "localhost" :port 4243)))
+
+
+
+
+
