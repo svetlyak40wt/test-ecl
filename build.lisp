@@ -1,3 +1,7 @@
+;; without this line, build under the ECL
+;; crashes when dependencies include something like cffi
+(asdf:register-immutable-system "uiop")
+
 (defpackage :build
   (:use
    :common-lisp
